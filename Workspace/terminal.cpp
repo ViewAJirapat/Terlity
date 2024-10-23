@@ -30,6 +30,14 @@ public:
         logs.push_back(Log("2077-10-23", "Server maintenance completed successfully."));
     }
 
+    void displayWelcomeMessage() {
+        std::cout << "===================================\n";
+        std::cout << "       Welcome to the Terminal     \n";
+        std::cout << "     Message of the Day (MOTD):    \n";
+        std::cout << "  Remember to complete your tasks!  \n";
+        std::cout << "===================================\n\n";
+    }
+
     void displayEmails() {
         std::cout << "Emails:\n";
         for (size_t i = 0; i < emails.size(); ++i) {
@@ -63,6 +71,9 @@ public:
     }
 
     void run() {
+        
+        displayWelcomeMessage(); // Display the welcome message
+
         while (true) {
             std::cout << "Terminal Menu:\n";
             std::cout << "1. View Emails\n";
