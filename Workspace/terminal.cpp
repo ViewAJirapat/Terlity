@@ -22,6 +22,8 @@ class Terminal {
 private:
     std::vector<Email> emails;
     std::vector<Log> logs;
+    std::string validUsername = "admin"; // Hardcoded username
+    std::string validPassword = "123456"; // Hardcoded password
 
 public:
     Terminal() {
@@ -32,6 +34,12 @@ public:
 
     void displayWelcomeMessage() {
         std::cout << "===================================\n";
+        std::cout << "*******   *******    ********        **        *******     ******     **    **   " << std::endl;
+        std::cout << "  **      **         **     **       **          **          **        **  **    " << std::endl;
+        std::cout << "  **      ******     ********        **          **          **         ****     " << std::endl;
+        std::cout << "  **      **         **     **       **          **          **          **      " << std::endl;
+        std::cout << "  **      *******    **     **       *******   ******        **          **      " << std::endl;
+
         std::cout << "       Welcome to the Terminal     \n";
         std::cout << "     Message of the Day (MOTD):    \n";
         std::cout << "  Remember to complete your tasks!  \n";
@@ -70,8 +78,30 @@ public:
         }
     }
 
+    bool login() {
+        std::string username, password;
+
+        std::cout << "Login required. Please enter your credentials.\n";
+        std::cout << "Username: ";
+        std::cin >> username;
+        std::cout << "Password: ";
+        std::cin >> password;
+
+        if (username == validUsername && password == validPassword) {
+            std::cout << "Login successful!\n\n";
+            return true;
+        } else {
+            std::cout << "Invalid username or password. Access denied.\n";
+            return false;
+        }
+    }
+
     void run() {
-        
+        // Perform login first
+        if (!login()) {
+            return; // Exit if login fails
+        }
+
         displayWelcomeMessage(); // Display the welcome message
 
         while (true) {
@@ -112,3 +142,10 @@ int main() {
     terminal.run();
     return 0;
 }
+
+/*
+*******
+  **
+  **
+  **
+*/
