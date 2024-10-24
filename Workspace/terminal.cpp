@@ -22,8 +22,8 @@ class Terminal {
 private:
     std::vector<Email> emails;
     std::vector<Log> logs;
-    std::string validUsername = "admin"; // Hardcoded username
-    std::string validPassword = "123456"; // Hardcoded password
+    std::string validUsername = "admin";
+    std::string validPassword = "123456";
 
 public:
     Terminal() {
@@ -33,17 +33,17 @@ public:
     }
 
     void displayWelcomeMessage() {
-        std::cout << "===================================\n";
-        std::cout << "*******   *******    ********        **        *******     ******     **    **   " << std::endl;
-        std::cout << "  **      **         **     **       **          **          **        **  **    " << std::endl;
-        std::cout << "  **      ******     ********        **          **          **         ****     " << std::endl;
-        std::cout << "  **      **         **     **       **          **          **          **      " << std::endl;
-        std::cout << "  **      *******    **     **       *******   ******        **          **      " << std::endl;
-
-        std::cout << "       Welcome to the Terminal     \n";
-        std::cout << "     Message of the Day (MOTD):    \n";
-        std::cout << "  Remember to complete your tasks!  \n";
-        std::cout << "===================================\n\n";
+        std::cout << "========================================================================\n";
+        std::cout << "*******   *******   ********    **        *******   ******   **    **   " << std::endl;
+        std::cout << "  **      **        **     **   **          **        **      **  **    " << std::endl;
+        std::cout << "  **      ******    ********    **          **        **       ****     " << std::endl;
+        std::cout << "  **      **        **     **   **          **        **        **      " << std::endl;
+        std::cout << "  **      *******   **     **   *******   ******      **        **      " << std::endl;
+        std::cout << "========================================================================" << std::endl;
+        std::cout << "                          Welcome to the Terminal     \n";
+        std::cout << "                         Message of the Day (MOTD):    \n";
+        std::cout << "                      Remember to complete your tasks!  \n";
+        std::cout << "========================================================================\n\n";
     }
 
     void displayEmails() {
